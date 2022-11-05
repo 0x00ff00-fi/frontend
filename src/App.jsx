@@ -2,8 +2,10 @@ import "./App.css";
 import Nav from "./components/Nav";
 import SideBar from "./components/SideBar";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 function App() {
+
 	const user = {
 		icon: <img src="/src/assets/star.svg" ></img>,
 		name: "Stella",
@@ -26,6 +28,7 @@ function App() {
 				<Card post={fakepost} />
 				<Card>Bye World</Card>
 			</div>
+			<Footer />
         </div>
     );
 }
