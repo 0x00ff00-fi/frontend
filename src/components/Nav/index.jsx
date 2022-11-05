@@ -16,10 +16,9 @@ export default function Nav(props) {
         <input
           className="nav_srch"
           type="text"
-          name=""
+          name="search-field"
           id="search-field"
-          placeholder="search something"
-        />
+          placeholder="search something" />
       </form>
       <div className="nav_user">{props?.user?.name}</div>
     </nav>

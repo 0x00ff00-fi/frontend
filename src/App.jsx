@@ -52,7 +52,7 @@ function App() {
           )
         })}
       </div>
-      <Footer user={iconObject(user)} />
+      <Footer user={iconObject(user)} userIcon={user.icon} />
     </div>
   );
 }
