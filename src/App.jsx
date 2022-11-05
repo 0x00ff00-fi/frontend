@@ -44,7 +44,6 @@ function App() {
             <Card key={i} post={iconObject(post)} />
           )
         })}
-        <Card>Bye World</Card>
       </div>
       <Footer user={iconObject(user)} />
     </div>

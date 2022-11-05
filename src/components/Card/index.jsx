@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./styles.css";
 
-export default function({ post }) {
+export default function ({ post }) {
   return (
     <div className="card">
       {post?.name && (
@@ -22,9 +22,9 @@ export default function({ post }) {
         </div>
       )}
       <div className="card-body">
-        {post?.media && <img src={post?.media} />}
+        {post?.media && <img src={post?.media} className="image-container" />}
         <div>{post?.content}</div>
       </div>
     </div>
-  )
+  );
 }
