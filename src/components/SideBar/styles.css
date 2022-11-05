@@ -1,8 +1,18 @@
 .side-bar {
     position: fixed;
     width: 300px;
-    background-color: white;
+    background-color: var(--c-gr-4);
     height: 100vh;
-    border: 3px solid red;
+    border-right: 1px solid var(--c-gr-3);
     margin-top: 40px;
+
+}
+
+
+.side_menu {
+    list-style: none;
+}
+
+.side_link {
+    text-decoration: none;
 }
