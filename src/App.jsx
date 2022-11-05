@@ -10,7 +10,7 @@ function iconObject(obj) {
   if (!obj?.icon) return obj;
   const icon = (
     <div className="icon-bg">
-      <img loading="lazy" src={`/public/${obj.icon}.svg`}></img>
+      <img loading="lazy" src={`/${obj.icon}.svg`}></img>
     </div>
   );
   return {
@@ -20,13 +20,13 @@ function iconObject(obj) {
 }
 function App() {
   const [posts, setPosts] = useState([])
-	const [filters, setFilters] = useState('')
+  const [filters, setFilters] = useState('')
 
-	const filteredPosts = posts.filter(p => p.content.toLowerCase().includes(filters) || p.name.toLowerCase().includes(filters))
+  const filteredPosts = posts.filter(p => p.content.toLowerCase().includes(filters) || p.name.toLowerCase().includes(filters))
 
-	function search(string) {
-		setFilters(string)
-	}
+  function search(string) {
+    setFilters(string)
+  }
 
   useEffect(() => {
     fetch("http://35.228.77.154/posts")
