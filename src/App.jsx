@@ -12,7 +12,7 @@ function App() {
     return (
         <div style={{ height: "120vh" }}>
             <Nav />
-			{/* <SideBar></SideBar> */}
+			<SideBar></SideBar>
             <div className="c-container">
 				<Card user={user}>Hello World</Card>
 				<Card>Bye World</Card>

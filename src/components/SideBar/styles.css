@@ -16,3 +16,7 @@
 .side_link {
     text-decoration: none;
 }
+
+.side_link:hover {
+    color: var(--c-prm-2);
+}
