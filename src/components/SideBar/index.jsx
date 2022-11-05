@@ -14,7 +14,7 @@ export default function SideBar(props) {
             <li className="side_itm"><a href="" className="side_link">settings</a></li>
         </ul>
     </aside>
-    : <aside className="closed-side">
+    : <aside className="side-bar closed">
     <div className="closed-side_header">
         <img className="side_icon" src="/src/assets/hamburger.svg" onClick={()=>setSbIsOpen(true)}/>
     </div>

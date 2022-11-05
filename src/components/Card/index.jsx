@@ -6,18 +6,18 @@ export default function (props) {
 
     return (
         <div className="card" {...rest}>
-            {post?.user && (
+            {post?.name && (
                 <div className="card-header">
                     <div className="header-icon">
-                        <div className="card-icon">{post?.user?.icon}</div>
-                        <span>{post?.user?.name}</span>
+                        <div>{post?.icon}</div>
+                        <span>{post?.name}</span>
                     </div>
-                    <div>{""+post?.dateTime}</div>
+                    <div>{""+post?.created_at}</div>
                 </div>
             )}
             <div className="card-body">
-                {post?.body?.media && <div>{post?.body?.media}</div>}
-                <div>{post?.body?.text}</div>
+                {post?.media && <div>{post?.body?.media}</div>}
+                <div>{post?.text}</div>
             </div>
         </div>
     );

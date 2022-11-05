@@ -5,6 +5,7 @@
     height: 100vh;
     border-right: 1px solid var(--c-gr-3);
     margin-top: 40px;
+    z-index: 1;
 }
 .side_header {
     display: flex;
@@ -18,13 +19,8 @@
 .side_link:hover {
     color: var(--c-prm-2);
 }
-.closed-side {
-    position: fixed;
+.closed {
     width: 50px;
-    background-color: var(--c-gr-4);
-    height: 100vh;
-    border-right: 1px solid var(--c-gr-3);
-    margin-top: 40px;
 }
 .closed-side_header {
     display: flex;

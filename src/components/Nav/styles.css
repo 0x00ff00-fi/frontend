@@ -8,7 +8,7 @@
     background-color: var(--c-gr-4);
     border-bottom: 1px solid var(--c-gr-3);
 
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
     justify-content: space-between;
