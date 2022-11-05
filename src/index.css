@@ -1,10 +1,14 @@
 :root {
-    --c-prm-1: #ffff;
-    --c-prm-5: #edfe;
-    --c-prm-9: #ddd;
-    --c-gr-1: #efef;
-    --c-gr-5: #efef;
-    --c-gr-9: #efef;
+    --c-prm-1: #30855A;
+    --c-prm-2: #48BB77;
+    --c-prm-3: #9AE7B4;
+    --c-prm-4: #C6F6D6;
+
+    --c-gr-1: #222422;
+    --c-gr-2: #4E514E;
+    --c-gr-3: #CFD2CE;
+    --c-gr-4: #F6F6F6;
+
     --c-scc: #00ff00;
     --c-err: #ff0000;
 
