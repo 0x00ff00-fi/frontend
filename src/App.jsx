@@ -9,7 +9,7 @@ function iconObject(obj) {
   if (typeof obj !== "object") return obj;
   if (!obj?.icon) return obj;
   const icon = (
-    <div className="icon">
+    <div className="icon-bg">
       <img src={`/src/assets/${obj.icon}.svg`}></img>
     </div>
   );
