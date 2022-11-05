@@ -11,7 +11,7 @@ function App() {
   const filteredPosts = posts.filter(p => p.content.toLowerCase().includes(filters) || p.name.toLowerCase().includes(filters))
 
   useEffect(() => {
-    fetch("http://35.228.77.154/posts")
+    fetch("https://green-api.kendaganio.com/posts")
       .then(r => r.json())
       .then(p => setPosts(p))
 

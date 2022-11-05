@@ -17,7 +17,7 @@ export default function Footer({ user }) {
   }
 
   async function createPost(post) {
-    return fetch("http://35.228.77.154/posts", {
+    return fetch("https://green-api.kendaganio.com/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
