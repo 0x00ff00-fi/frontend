@@ -7,7 +7,7 @@ export default function SideBar(props) {
     return sbIsOpen ? 
     <aside className="side-bar">
         <div className="side_header">
-            <img className="side_icon" src="/src/assets/close.svg" onClick={()=>setSbIsOpen(false)}/>
+            <img className="side_icon" src="/public/close.svg" onClick={()=>setSbIsOpen(false)}/>
         </div>
         <ul className="side_menu">
             <li className="side_itm"><a href="" className="side_link">#explore</a></li>
@@ -16,7 +16,7 @@ export default function SideBar(props) {
     </aside>
     : <aside className="side-bar closed">
     <div className="closed-side_header">
-        <img className="side_icon" src="/src/assets/hamburger.svg" onClick={()=>setSbIsOpen(true)}/>
+        <img className="side_icon" src="/public/hamburger.svg" onClick={()=>setSbIsOpen(true)}/>
     </div>
 </aside>
 }

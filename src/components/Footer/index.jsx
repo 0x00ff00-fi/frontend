@@ -12,7 +12,6 @@ export default function Footer(props) {
         name=""
         id=""
         placeholder="share your post"
-        style={{ height: '16px' }}
       />
       <div>{user?.icon && user.icon}</div>
     </footer>
