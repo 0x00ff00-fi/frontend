@@ -37,10 +37,16 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+ul, ol {
+  list-style: none;
+}
+
+a {  text-decoration: none; }
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: var(--c-gr-4);
   }
   a:hover {
     color: #747bff;
