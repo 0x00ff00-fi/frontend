@@ -9,12 +9,21 @@ function App() {
 		name: "Stella",
 	}
 
+	const fakepost = {
+		user,
+		body: {
+			media: null,
+			text: "My first fake post"
+		},
+		dateTime: new Date("11-05-2022 16:10")
+	}
+
     return (
         <div style={{ height: "120vh" }}>
             <Nav />
 			<SideBar></SideBar>
             <div className="c-container">
-				<Card user={user}>Hello World</Card>
+				<Card post={fakepost} />
 				<Card>Bye World</Card>
 			</div>
         </div>
