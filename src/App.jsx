@@ -4,12 +4,17 @@ import SideBar from "./components/SideBar";
 import Card from "./components/Card";
 
 function App() {
+	const user = {
+		icon: <img src="/src/assets/star.svg" ></img>,
+		name: "Stella",
+	}
+
     return (
         <div style={{ height: "120vh" }}>
             <Nav />
-			<SideBar></SideBar>
+			{/* <SideBar></SideBar> */}
             <div className="c-container">
-				<Card>Hello World</Card>
+				<Card user={user}>Hello World</Card>
 				<Card>Bye World</Card>
 			</div>
         </div>

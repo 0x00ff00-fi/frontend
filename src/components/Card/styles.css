@@ -1,4 +1,17 @@
 .card {
     border: 1px solid black;
     padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem
+}
+.card-icon {
+    display: flex;
+    height: 3rem;
+    background-color: #eee;
 }
