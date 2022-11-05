@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <div style={{ height: "120vh" }}>
+    <div>
       <Nav user={user} />
       <SideBar></SideBar>
       <div className="c-container">

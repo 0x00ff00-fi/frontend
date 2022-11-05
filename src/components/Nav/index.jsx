@@ -14,7 +14,7 @@ export default function Nav(props) {
         id=""
         placeholder="search something"
       />
-      <div className="nav_user">Human</div>
+      <div className="nav_user">{props?.user?.name}</div>
     </nav>
   );
 }
