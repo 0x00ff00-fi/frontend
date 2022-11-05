@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./styles.css";
 
 export default function({ post }) {
@@ -7,7 +7,9 @@ export default function({ post }) {
       {post?.name && (
         <div className="card-header">
           <div className="header-icon">
-            <div>{post?.icon}</div>
+            <div className="icon-bg">
+              <img loading="lazy" src={`/${post.icon}.svg`}></img>
+            </div>
             <span>{post?.name}</span>
           </div>
           <div className="card-date">

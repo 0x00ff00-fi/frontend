@@ -18,7 +18,7 @@ export default function Nav(props) {
           type="text"
           name="search-field"
           id="search-field"
-          placeholder="search something" />
+          placeholder="Search..." />
       </form>
       <div className="nav_user">{props?.user?.name}</div>
     </nav>

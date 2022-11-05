@@ -5,28 +5,10 @@ import SideBar from "./components/SideBar";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 
-function iconObject(obj) {
-  if (typeof obj !== "object") return obj;
-  if (!obj?.icon) return obj;
-  const icon = (
-    <div className="icon-bg">
-      <img loading="lazy" src={`/${obj.icon}.svg`}></img>
-    </div>
-  );
-  return {
-    ...obj,
-    icon: icon,
-  };
-}
 function App() {
   const [posts, setPosts] = useState([])
   const [filters, setFilters] = useState('')
-
   const filteredPosts = posts.filter(p => p.content.toLowerCase().includes(filters) || p.name.toLowerCase().includes(filters))
-
-  function search(string) {
-    setFilters(string)
-  }
 
   useEffect(() => {
     fetch("http://35.228.77.154/posts")
@@ -41,18 +23,26 @@ function App() {
     name: "Luigi",
   };
 
+  function renderNothing() {
+    return (<p>Nothing to see here at the moment.</p>)
+  }
+
+  function renderPosts() {
+    return filteredPosts.map((post, i) => {
+      return (
+        <Card key={i} post={post} />
+      )
+    })
+  }
+
   return (
     <div>
-      <Nav user={user} search={search} />
+      <Nav user={user} search={setFilters} />
       <SideBar></SideBar>
       <div className="c-container">
-        {filteredPosts.map((post, i) => {
-          return (
-            <Card key={i} post={iconObject(post)} />
-          )
-        })}
+        {filteredPosts.length < 1 ? renderNothing() : renderPosts()}
       </div>
-      <Footer user={iconObject(user)} userIcon={user.icon} />
+      <Footer user={user} />
     </div>
   );
 }

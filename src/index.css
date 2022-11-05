@@ -47,6 +47,16 @@ ul, ol {
 
 a {  text-decoration: none; }
 
+input::file-selector-button {
+  font-weight: bold;
+  border: 1px solid #ccc;
+  margin-left: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
