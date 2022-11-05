@@ -1,0 +1,8 @@
+.side-bar {
+    position: fixed;
+    width: 300px;
+    background-color: white;
+    height: 100vh;
+    border: 3px solid red;
+    margin-top: 40px;
+}
