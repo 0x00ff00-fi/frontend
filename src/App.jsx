@@ -20,6 +20,13 @@ function iconObject(obj) {
 }
 function App() {
   const [posts, setPosts] = useState([])
+	const [filters, setFilters] = useState('')
+
+	const filteredPosts = posts.filter(p => p.content.toLowerCase().includes(filters) || p.name.toLowerCase().includes(filters))
+
+	function search(string) {
+		setFilters(string)
+	}
 
   useEffect(() => {
     fetch("http://35.228.77.154/posts")
@@ -36,10 +43,10 @@ function App() {
 
   return (
     <div>
-      <Nav user={user} />
+      <Nav user={user} search={search} />
       <SideBar></SideBar>
       <div className="c-container">
-        {posts.map((post, i) => {
+        {filteredPosts.map((post, i) => {
           return (
             <Card key={i} post={iconObject(post)} />
           )
