@@ -1,24 +1,27 @@
 .nav-bar {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    padding: var(--s-sm) var(--s-lg);
+   height: 56px;
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   padding: var(--s-sm) var(--s-lg);
+   background-color: var(--c-gr-4);
+   border-bottom: 1px solid var(--c-gr-3);
+   z-index: 2;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 
-    background-color: var(--c-gr-4);
-    border-bottom: 1px solid var(--c-gr-3);
-
-    z-index: 2;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav_logo {
+  font-family: "Menlo", "Consolas", monospace;
+  color: var(--c-prm-2);
 }
 
 .nav_srch {
-   max-width: 500px;
-    padding: var(--s-sm) var(--s-md);
-    border: 1px solid #fff;
-    border-radius: var(--br-pl);
-    font-size: var(--f-sm);
+   width: 700px;
+   padding: var(--s-sm) var(--s-md);
+   border: 1px solid #fff;
+   border-radius: var(--br-pl);
+   font-size: var(--f-sm);
 }

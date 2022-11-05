@@ -10,7 +10,7 @@ function iconObject(obj) {
   if (!obj?.icon) return obj;
   const icon = (
     <div className="icon-bg">
-      <img src={`/src/assets/${obj.icon}.svg`}></img>
+      <img loading="lazy" src={`/src/assets/${obj.icon}.svg`}></img>
     </div>
   );
   return {
