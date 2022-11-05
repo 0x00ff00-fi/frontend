@@ -59,12 +59,12 @@ a {  text-decoration: none; }
 @media (prefers-color-scheme: dark) {
   :root {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #-000001;
   }
   a:hover {
-    color: #747bff;
+    color: #746bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f8f9f9;
   }
 }

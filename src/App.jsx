@@ -1,57 +1,54 @@
 import "./App.css";
+import { useEffect, useState } from "react"
 import Nav from "./components/Nav";
 import SideBar from "./components/SideBar";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 
 function iconObject(obj) {
-    if (typeof obj !== "object") return obj;
-    if (!obj?.icon) return obj;
-    const icon = (
-        <div className="icon-bg">
-            <img className="icon" src={`/src/assets/${obj.icon}.svg`}></img>
-        </div>
-    );
-    return {
-        ...obj,
-        icon: icon,
-    };
+  if (typeof obj !== "object") return obj;
+  if (!obj?.icon) return obj;
+  const icon = (
+    <div className="icon">
+      <img src={`/src/assets/${obj.icon}.svg`}></img>
+    </div>
+  );
+  return {
+    ...obj,
+    icon: icon,
+  };
 }
-
 function App() {
-    const user = {
-        icon: "square",
-        name: "Luigi",
-    };
+  const [posts, setPosts] = useState([])
 
-    const fakepost = {
-        user,
-        body: {
-            media: null,
-            text: "My first fake post",
-        },
-        dateTime: new Date("11-05-2022 16:10"),
-    };
+  useEffect(() => {
+    fetch("http://35.228.77.154/posts")
+      .then(r => r.json())
+      .then(p => setPosts(p))
 
-    const trueFakePost = {
-        icon: "star",
-        name: "Stella",
-        media: null,
-        text: "My second fake post",
-        created_at: new Date("11-05-2022 18:10"),
-    };
+    return () => { console.log("useEffect: cleanup func") }
+  }, [])
 
-    return (
-        <div style={{ height: "120vh" }}>
-            <Nav />
-            <SideBar></SideBar>
-            <div className="c-container">
-                <Card post={iconObject(trueFakePost)} />
-                <Card>Bye World</Card>
-            </div>
-            <Footer user={iconObject(user)} />
-        </div>
-    );
+  const user = {
+    icon: "square",
+    name: "Luigi",
+  };
+
+  return (
+    <div style={{ height: "120vh" }}>
+      <Nav />
+      <SideBar></SideBar>
+      <div className="c-container">
+        {posts.map((post, i) => {
+          return (
+            <Card key={i} post={iconObject(post)} />
+          )
+        })}
+        <Card>Bye World</Card>
+      </div>
+      <Footer user={iconObject(user)} />
+    </div>
+  );
 }
 
 export default App;
