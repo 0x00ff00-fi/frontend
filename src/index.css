@@ -1,7 +1,24 @@
 :root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    --c-prm-1: #ffff;
+    --c-prm-5: #edfe;
+    --c-prm-9: #ddd;
+    --c-gr-1: #efef;
+    --c-gr-5: #efef;
+    --c-gr-9: #efef;
+    --c-scc: #00ff00;
+    --c-err: #ff0000;
+
+    --s-xs: .75rem; 
+    --s-sm: .5rem;
+    --s-md: 1rem; 
+    --s-lg: 2rem;
+
+    --f-sm: .875rem;
+    --f-md: 1rem;
+    --f-lg: 1.5rem;
+
+    --br-df: .5rem;
+    --br-pl: 9999px;
 }
 
 body {
