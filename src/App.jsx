@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div style={{ height: "120vh" }}>
-      <Nav />
+      <Nav user={user} />
       <SideBar></SideBar>
       <div className="c-container">
         {posts.map((post, i) => {
