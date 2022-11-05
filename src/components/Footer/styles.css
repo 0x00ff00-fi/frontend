@@ -8,6 +8,5 @@
     width: 100%;
     z-index: 0;
     padding: var(--s-sm) var(--s-lg);
-    background-color: var(--c-gr-4);
     border-top: 1px solid var(--c-gr-3);
 }

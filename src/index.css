@@ -68,17 +68,24 @@ input::file-selector-button {
   button {
     background-color: #f9f9f9;
   }
+  .footer, .nav-bar, .side-bar, .card {
+    background-color: white;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #111;
   }
   a:hover {
     color: #746bff;
   }
   button {
     background-color: #f8f9f9;
+  }
+  .footer, .nav-bar, .side-bar, .card {
+    background-color: var(--c-gr-1);
+    border-color: var(--c-gr-2);
   }
 }

@@ -1,24 +1,27 @@
 .side-bar {
     position: fixed;
     width: 300px;
-    background-color: var(--c-gr-4);
     height: 100vh;
     border-right: 1px solid var(--c-gr-3);
-    margin-top: 40px;
+    margin-top: 56px;
     z-index: 1;
 }
+
 .side_header {
     display: flex;
     justify-content: flex-end;
     padding: 2rem 2rem 0 0;
 }
+
 .side_icon {
     width: 1.5rem;
     cursor: pointer;
 }
+
 .side_link:hover {
     color: var(--c-prm-2);
 }
+
 .closed {
     width: 50px;
 }

@@ -5,7 +5,6 @@
    top: 0;
    right: 0;
    padding: var(--s-sm) var(--s-lg);
-   background-color: var(--c-gr-4);
    border-bottom: 1px solid var(--c-gr-3);
    z-index: 2;
    display: flex;
@@ -19,9 +18,9 @@
 }
 
 .nav_srch {
-   width: 700px;
-   padding: var(--s-sm) var(--s-md);
-   border: 1px solid #fff;
-   border-radius: var(--br-pl);
-   font-size: var(--f-sm);
+  width: 700px;
+  padding: var(--s-sm) var(--s-md);
+  border: 1px solid inherit;
+  border-radius: var(--br-pl);
+  font-size: var(--f-sm);
 }
