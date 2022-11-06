@@ -5,6 +5,9 @@ import SideBar from "./components/SideBar";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 
+const AVAILABLE_ICONS = ["square", "circle", "triangle", "star"]
+const AVAILABLE_NAMES = ["Mario", "Luigi", "Peach", "Bowser", "Toad", "Yoshi", "Boo", "Ronald McDonald"]
+
 function App() {
   const [posts, setPosts] = useState([])
   const [filters, setFilters] = useState('')
@@ -18,9 +21,10 @@ function App() {
     return () => { console.log("useEffect: cleanup func") }
   }, [])
 
+
   const user = {
-    icon: "square",
-    name: "Luigi",
+    icon: AVAILABLE_ICONS[Math.floor(Math.random() * AVAILABLE_ICONS.length)],
+    name: AVAILABLE_NAMES[Math.floor(Math.random() * AVAILABLE_NAMES.length)]
   };
 
   function renderNothing() {
