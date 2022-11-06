@@ -89,3 +89,25 @@ input::file-selector-button {
     border-color: var(--c-gr-2);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .side-bar {
+    display: none;
+  }
+  .c-container {
+    width: 100%;
+    padding: 5rem 16px;
+  }
+  .nav-bar .nav_srch {
+    width: 180px;
+  }
+
+  .footer form {
+    padding-bottom: 1rem;
+  }
+
+  .footer form input {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
